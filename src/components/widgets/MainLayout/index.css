@@ -1,0 +1,15 @@
+body{--head-menu-font-size:14px;--menu-item-count-max:Infinity}
+.layout{--head-height:64px;--content-height:calc(100vh - var(--head-height));--logo-size:50px;--logo-font-size:34px;}
+/*楼上3600*800大屏测试*/
+@media (min-width: 3500px) {
+    body{--head-menu-font-size:26px;--menu-item-count-max:12;}    
+    .layout{--head-height:100px;--content-height:calc(100vh - var(--head-height));--logo-size:80px;--logo-font-size:50px;}
+}
+
+.layoutHeader{background: url("./images/topbg.png");background-size: 100% var(--head-height);height: var(--head-height);line-height: var(--head-height);}
+.headerLogo{float:left;font-size:var(--logo-font-size);line-height: var(--head-height);padding-left:var(--logo-size);color: #fff;background: url("./images/logo.png") left center no-repeat;background-size: var(--logo-size);}
+.headerLogo span{color:#fff;text-shadow: 0px 3px 1px rgba(0, 61, 84, 0.3);background-image:linear-gradient(#00d8ff,#00aeff);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
+.headerMenu{float: right;line-height: var(--head-height);background:none;border-bottom:0;}
+:global(.ant-menu),:global(.ant-menu) :global(.ant-menu-item){font-size: var(--head-menu-font-size);}
+.headerMenu li{z-index:1;}
+.layoutContent{height: var(--content-height);position: relative;}
